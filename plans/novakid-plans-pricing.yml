@@ -1,0 +1,47 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.novakidschool.com/prices/
+plan_count: 0
+note: >-
+  Novakid publishes NO API plans - there is no public API, no developer tier and no
+  API price list. plan_count is 0 for that reason and not because the pricing page is
+  missing. What Novakid does publish at /prices/ is consumer lesson pricing for parents,
+  recorded below under consumer_pricing[] so the distinction stays explicit and is never
+  mistaken for API commercial terms.
+plans: []
+consumer_pricing:
+  page: https://www.novakidschool.com/prices/
+  http_status: 200
+  currency: USD
+  note: >-
+    Prices shown are "from" starting rates on the global English page; the page states the
+    final rate depends on lesson frequency, teacher type and subscription length, and it
+    does not publish a full package matrix. Regional sites price in local currency.
+  tiers:
+  - name: Standard (non-native teacher), individual lesson
+    price_from: 9.00
+    currency: USD
+    unit: per 25-minute lesson
+    billing: subscription, rate varies with frequency and subscription length
+  - name: Premium (native English speaker), individual lesson
+    price_from: 17.00
+    currency: USD
+    unit: per 25-minute lesson
+    billing: subscription, rate varies with frequency and subscription length
+  - name: International group lessons
+    price_from: 8.00
+    currency: USD
+    unit: per 45-minute group session
+    billing: subscription; page advertises a free first month
+  - name: Trial lesson
+    price_from: 0.00
+    currency: USD
+    unit: one 25-minute lesson
+    billing: free, no card required
+partnership_channel:
+  url: https://www.novakidschool.com/partnership/
+  http_status: 200
+  note: >-
+    The partnership page offers HR/benefits, loyalty, B2B bulk-lesson resale, affiliate
+    (via Impact) and cross-marketing arrangements. It names no API, SDK, developer access
+    or technical integration; the contact is a form and partners@novakidschool.com.

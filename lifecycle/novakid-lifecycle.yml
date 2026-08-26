@@ -1,0 +1,43 @@
+generated: '2026-08-26'
+method: searched
+source: https://status.novakidschool.com/
+summary: >-
+  Novakid publishes an operational status page for its consumer platform. It publishes no
+  API versioning policy, no deprecation policy, no Sunset/Deprecation header commitment
+  (RFC 8594) and no SLA, because it publishes no public API.
+status_page:
+  present: true
+  url: https://status.novakidschool.com/
+  http_status: 200
+  title: Novakid Uptime
+  platform: Uptime Kuma (self-hosted)
+  scope: >-
+    Public monitor groups observed on the page payload - Sign Up, School (landing, login,
+    student/parent/teacher dashboards), School (China), Admin, Core Services (API,
+    Websocket Server), Databases. The monitors are named but response-time and
+    incident history are rendered client-side.
+  incident_feed: null
+  note: >-
+    The page lists an "API" monitor under Core Services, which is the internal
+    application backend, not a published developer API.
+versioning:
+  policy_published: false
+  scheme: null
+  note: No public API, therefore no published versioning scheme.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  note: >-
+    No deprecation policy is published. No Deprecation or Sunset pointer is emitted from
+    this file - only StatusPage, which is a real, verified page.
+sla:
+  published: false
+  url: null
+support_lifecycle:
+  help_center: https://help.novakidschool.com/en/
+  service_desk: https://novakid.atlassian.net/servicedesk/customer/portal/2
+  note: >-
+    Both are end-user/teacher support surfaces (Intercom knowledge base and a Jira Service
+    Management portal). Neither is a developer support channel.
+deprecated_operations: []

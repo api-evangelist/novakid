@@ -1,0 +1,87 @@
+generated: '2026-08-26'
+method: probed
+source: live GET probes of /.well-known/* on every Novakid host reachable from apis.yml
+note: >-
+  Nothing was found. Every /.well-known/ path probed on the marketing host returns the
+  site's 404 handler as an HTML SPA shell, and every path probed on the API host returns a
+  200 text/plain body of "Hello" from a catch-all handler - a soft-200, not a document.
+  The status host answers /.well-known/* with its own HTML SPA shell (also a soft-200).
+  Per the pipeline contract no WellKnown or SecurityTxt pointer is emitted from this file:
+  it records an absence, not a presence. NOTE ON SCOPE - api.novakidschool.com/robots.txt
+  is "User-Agent: * / Disallow: /", so the API host was not crawled beyond the
+  discovery probes recorded here.
+hosts:
+- host: www.novakidschool.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: api.novakidschool.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: soft-200 catch-all, body is the 5-byte text/plain string "Hello" - not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: soft-200 catch-all, body is the 5-byte text/plain string "Hello" - not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: soft-200 catch-all, body is the 5-byte text/plain string "Hello" - not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: soft-200 catch-all, body is the 5-byte text/plain string "Hello" - not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: soft-200 catch-all, body is the 5-byte text/plain string "Hello" - not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: soft-200 catch-all, body is the 5-byte text/plain string "Hello" - not an AgentCard
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: soft-200 catch-all, body is the 5-byte text/plain string "Hello" - not an AgentCard
+- host: status.novakidschool.com
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: soft-200, body is the status page's HTML SPA shell (2444 bytes) - not an AgentCard
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: soft-200, body is the status page's HTML SPA shell (2444 bytes) - not a document
+robots:
+- host: www.novakidschool.com
+  url: https://www.novakidschool.com/robots.txt
+  status: 200
+  note: >-
+    Allows general crawlers with path exclusions, but explicitly disallows GPTBot,
+    ClaudeBot, Bytespider and meta-webindexer from the entire site.
+- host: api.novakidschool.com
+  url: https://api.novakidschool.com/robots.txt
+  status: 200
+  note: 'Blanket disallow: "User-Agent: * / Disallow: /".'

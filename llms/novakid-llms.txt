@@ -1,0 +1,65 @@
+# Novakid
+
+> Novakid is an online English language school for children aged roughly 4-12, founded in 2017
+> by Max Azarov and Dmitry Malin. It delivers 25-minute one-to-one and small-group video lessons
+> with native and near-native speaking teachers through a proprietary gamified virtual classroom,
+> on a CEFR-aligned curriculum, sold directly to parents as a subscription across Europe, Latin
+> America, the Middle East and Asia.
+
+Generated: 2026-08-26
+Method: generated (from apis.yml and this repository's probed artifacts)
+Source: https://www.novakidschool.com/ — no provider-published /llms.txt exists (HTTP 404)
+
+## API status
+
+Novakid publishes **no public API**. As of 2026-08-26 there is no developer portal, no API
+reference, no OpenAPI/AsyncAPI/GraphQL/Protobuf/WSDL contract, no SDK in any public package
+registry, no MCP server, no A2A agent card and no Postman collection. The partnership page
+offers commercial partnerships only (HR benefits, loyalty, B2B bulk lessons, affiliate via
+Impact) and names no technical integration.
+
+Two things a machine reader should know before probing further:
+
+- `https://api.novakidschool.com/robots.txt` is a blanket `User-Agent: * / Disallow: /`.
+  That host is an internal application backend, not a developer API. It was not crawled.
+- `https://www.novakidschool.com/robots.txt` disallows GPTBot, ClaudeBot, Bytespider and
+  meta-webindexer from the entire site.
+
+## Company
+
+- [Novakid](https://www.novakidschool.com/): Home page for the global English-language site.
+- [About Novakid](https://www.novakidschool.com/about-us/): Company background and mission.
+- [Programmes and methodology](https://www.novakidschool.com/programs/): CEFR-aligned levels
+  from Pre-K through Flyers, plus Time2Talk and group speaking.
+- [Teachers](https://www.novakidschool.com/teacher/): Teacher catalogue and selection.
+- [Newsroom](https://novakidschool.com/newsroom/): Press releases and company news.
+- [Careers](https://hr.novakidschool.com/): Hiring site.
+
+## Commercial
+
+- [Pricing](https://www.novakidschool.com/prices/): Consumer lesson pricing. Standard lessons
+  from $9 per 25 minutes, Premium (native speaker) from $17, group sessions from $8 per 45
+  minutes. Final rate depends on frequency, teacher type and subscription length.
+- [Free trial](https://www.novakidschool.com/free-trial/): Free 25-minute trial lesson, no card.
+- [Log in](https://www.novakidschool.com/login/): Parent, student and teacher sign-in.
+- [Partnerships](https://www.novakidschool.com/partnership/): Business partnership enquiries,
+  partners@novakidschool.com.
+
+## Support and operations
+
+- [Help Center](https://help.novakidschool.com/en/): Intercom-hosted knowledge base.
+- [Status page](https://status.novakidschool.com/): "Novakid Uptime", an Uptime Kuma status
+  page covering sign-up, the school landing and dashboards, core services and databases.
+- [Blog](https://www.novakidschool.com/blog/): Parenting and English-learning articles.
+
+## Legal
+
+- [Membership terms](https://www.novakidschool.com/legal/membership-terms/)
+- [Privacy policy](https://www.novakidschool.com/legal/privacy-policy/)
+- [Cookie policy](https://www.novakidschool.com/legal/cookie-policy/)
+
+## Optional
+
+- [API Evangelist profile](https://apis.io/provider/novakid): Independent third-party profile
+  of Novakid's public API surface. Corrections, re-scores and removal are free — open an issue
+  at https://github.com/api-evangelist/novakid.

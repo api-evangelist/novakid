@@ -1,0 +1,14 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.novakidschool.com/ (site-wide search for developer/API documentation)
+limit_count: 0
+note: >-
+  Novakid documents no rate limits, because it documents no API. There is no developer
+  portal, no API reference and no published limits, quotas, burst allowances or
+  rate-limit response headers. The only host that answers as an API,
+  api.novakidschool.com, is an undocumented internal application backend whose robots.txt
+  is a blanket "User-Agent: * / Disallow: /", so no runtime rate-limit headers were
+  observed and none were sought.
+rate_limits: []
+headers: []
+exhaustion_status: null

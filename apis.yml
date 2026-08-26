@@ -1,17 +1,32 @@
 aid: novakid
 name: Novakid
-description: 'Novakid is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Novakid is an online English language school for children aged roughly 4-12, founded in 2017 by
+  Max Azarov and Dmitry Malin, incorporated in the United States and operating as a fully remote
+  company with a head office in London. It delivers 25-minute one-to-one and small-group video
+  lessons with native and near-native speaking teachers through a proprietary gamified virtual
+  classroom, on a curriculum aligned to the CEFR framework, and sells directly to parents as a
+  subscription across Europe, Latin America, the Middle East and Asia. Novakid is a
+  direct-to-consumer education product: as of this profile it publishes no developer portal, no
+  API reference, no SDKs and no machine-readable API contract of any kind, and its production API
+  host serves a blanket robots.txt disallow.
+image: https://cdn.novakidschool.com/landing/static/images/open-graph/GLOBAL.png?v=3
 url: https://raw.githubusercontent.com/api-evangelist/novakid/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Education
+- EdTech
+- Online Learning
+- Language Learning
+- English
+- Children
+- Consumer Subscription
+- Video Conferencing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,59 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/novakid-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/novakid-stock
+  url: https://www.novakidschool.com/
+- type: Blog
+  url: https://www.novakidschool.com/blog/
+- type: Support
+  url: https://help.novakidschool.com/en/
+- type: Pricing
+  url: https://www.novakidschool.com/prices/
+- type: SignUp
+  url: https://www.novakidschool.com/free-trial/
+- type: Login
+  url: https://www.novakidschool.com/login/
+- type: TermsOfService
+  url: https://www.novakidschool.com/legal/membership-terms/
+- type: PrivacyPolicy
+  url: https://www.novakidschool.com/legal/privacy-policy/
+- type: StatusPage
+  url: https://status.novakidschool.com/
+- type: Lifecycle
+  url: lifecycle/novakid-lifecycle.yml
+- type: Plans
+  url: plans/novakid-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/novakid-rate-limits.yml
+- type: LLMsTxt
+  url: llms/novakid-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Novakid is a direct-to-consumer children's English school with no developer program on any
+    host - no portal, reference, SDK or spec exists, its only API-shaped host
+    api.novakidschool.com answers every probed path with a 5-byte text/plain "Hello" catch-all
+    behind a blanket robots.txt "Disallow: /", and that host's own /docs surface 302s to a
+    Google OAuth login for staff.
+  evidence:
+  - url: https://www.novakidschool.com/llms.txt
+    status: 404
+  - url: https://www.novakidschool.com/.well-known/api-catalog
+    status: 404
+  - url: https://api.novakidschool.com/openapi.json
+    status: 200
+  - url: https://api.novakidschool.com/robots.txt
+    status: 200
+  - url: https://api.novakidschool.com/docs
+    status: 302
+  - url: https://github.com/novakidschool
+    status: 404
+  checked: '2026-08-26'
